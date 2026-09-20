@@ -2,7 +2,7 @@
 
 This project implements a DeepFake detection model using a combination of **Convolutional Neural Networks (CNN)** for spatial feature extraction and **Long Short-Term Memory (LSTM)** networks for capturing temporal patterns across video frames.
 
-## 📁 Dataset
+## Dataset
 
 The model is trained on the **DFD (DeepFake Detection) dataset** consisting of two folders:
 
@@ -11,7 +11,7 @@ DFD_manipulated_sequences: Contains fake/deepfake videos.
 
 To avoid class imbalance, a maximum of 100 fake videos are used, and real videos are duplicated to balance the dataset.
 
-## 📦 Data Preparation
+## Data Preparation
 
 * Each video is processed by extracting **10 frames**.
 * Each frame is resized to **128x128 pixels**.
@@ -26,7 +26,7 @@ X = X / 255.0
 y = tf.keras.utils.to_categorical(y, num_classes=2)
 
 
-## 🧠 Model Architecture
+## Model Architecture
 
 The model uses:
 
